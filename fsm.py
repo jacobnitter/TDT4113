@@ -56,7 +56,7 @@ class Keypad:
         prevkey = 'start'
         key = None
 
-        while count < 2:
+        while count < 1:
             key = self.do_polling()
             if key != 'No key':
                 if prevkey == 'start':
@@ -69,7 +69,7 @@ class Keypad:
                 else:
                     prevkey = 'start'
                     count += 1
-        time.sleep(3)
+        time.sleep(4)
         print('keypad key =', key)
         return key
 
@@ -252,8 +252,8 @@ class Agent:
             print("* eller #")
             pass
         else:
-            print("temp_password =", self.temp_password)
             self.temp_password += str(self.signal)  # Legg til det vi skriver inn i keypaden
+            print("temp_password =", self.temp_password)
 
     def clear_password(self):
         self.temp_password = ""
