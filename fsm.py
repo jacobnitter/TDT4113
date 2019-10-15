@@ -20,7 +20,7 @@ class Keypad:
     symbols = {'nokey' : 'No Key', '1817' : 1, '1827' : 2, '1822' : 3, '2317' : 4, '2327' : 5, '2322' : 6, '2417' : 7, '2427' : 8, '2422' : 9, '2517' : '*', '2527' : 0, '2522' : '#'}
 
 
-    def setup(self):
+    def __init__(self):
 
         GPIO.setmode(GPIO.BCM)
 
