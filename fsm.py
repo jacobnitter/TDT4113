@@ -346,17 +346,17 @@ class Makerules(FSM):
                 print("Ferdig")
                 break
 
-        if __name__ == "__main__":
-            # print("Kjører")
-            keypad = Keypad()
-            ledboard = Ledboard()
+if __name__ == "__main__":
+    print("Kjører")
+    keypad = Keypad()
+    ledboard = Ledboard()
 
-            agent = Agent(keypad, ledboard, "password.txt")
-            fsm = Makerules(agent)
-            fsm.main_loop()
+    agent = Agent(keypad, ledboard, "password.txt")
+    fsm = Makerules(agent)
+    fsm.main_loop()
 
 
-print('hei')
+
 
 
 
