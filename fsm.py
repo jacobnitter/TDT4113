@@ -356,6 +356,9 @@ class Makerules(FSM):
             fsm.main_loop()
 
 
+print('hei')
+
+
 
 
 
