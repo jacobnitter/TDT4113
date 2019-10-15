@@ -334,9 +334,9 @@ class Makerules(FSM):
         # begin in the FSM’s default initial state and then repeatedly call get next signal and run rules until the FSM enters its default final state.
 
 
-def main_loop(self):
-    self.currentState = "s-init"
-    while True:  # not self.agent.exit:
+    def main_loop(self):
+        self.currentState = "s-init"
+        while True:  # not self.agent.exit:
             print("Ny knapp trykket")
             print("State: ", self.currentState)
             input = str(self.agent.get_next_signal())
@@ -346,14 +346,16 @@ def main_loop(self):
                 print("Ferdig")
                 break
 
-    if __name__ == "__main__":
-        # print("Kjører")
-        keypad = Keypad()
-        ledboard = Ledboard()
+        if __name__ == "__main__":
+            # print("Kjører")
+            keypad = Keypad()
+            ledboard = Ledboard()
 
-        agent = Agent(keypad, ledboard, "password.txt")
-        fsm = Makerules(agent)
-        fsm.main_loop()
+            agent = Agent(keypad, ledboard, "password.txt")
+            fsm = Makerules(agent)
+            fsm.main_loop()
+
+
 
 
 
