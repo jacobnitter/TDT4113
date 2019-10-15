@@ -56,7 +56,7 @@ class Keypad:
         prevkey = 'start'
         key = None
 
-        while count < 20:
+        while count < 2:
             key = self.do_polling()
             if key != 'No key':
                 if prevkey == 'start':
@@ -69,7 +69,7 @@ class Keypad:
                 else:
                     prevkey = 'start'
                     count += 1
-        time.sleep(0.010)
+        time.sleep(3)
         print('keypad key =', key)
         return key
 
