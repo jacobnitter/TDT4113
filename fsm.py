@@ -347,7 +347,7 @@ class Makerules(FSM):
                 break
 
 if __name__ == "__main__":
-    print("Kjører")
+    print("Kjorer")
     keypad = Keypad()
     ledboard = Ledboard()
 
